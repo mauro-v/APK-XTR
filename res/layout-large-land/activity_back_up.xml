@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/parentStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/appbar" layout="@layout/app_bar_second" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/rl_ads" android:layout_below="@id/appbar">
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/shape_opo_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginStart="80.0dip" android:layout_marginEnd="80.0dip">
+            <TextView android:textColor="@color/colorAccent" android:gravity="center" android:id="@id/text_title" android:layout_marginTop="20.0dip" android:text="@string/back_up" style="@style/TextViewTitle" />
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <CheckBox android:enabled="false" android:id="@id/checkboxUserProfile" android:layout_marginTop="10.0dip" android:checked="true" android:text="@string/profile" style="@style/CheckBoxStyle" />
+                <CheckBox android:id="@id/checkboxFavorite" android:layout_marginTop="8.0dip" android:checked="true" android:text="@string/favorites" android:layout_marginStart="10.0dip" style="@style/CheckBoxStyle" />
+                <CheckBox android:id="@id/checkboxPlaylist" android:layout_marginTop="8.0dip" android:checked="true" android:text="@string/playlist" android:layout_marginStart="10.0dip" style="@style/CheckBoxStyle" />
+                <CheckBox android:id="@id/checkboxSettings" android:layout_marginTop="8.0dip" android:checked="true" android:text="@string/settings" android:layout_marginStart="8.0dip" style="@style/CheckBoxStyle" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <CheckBox android:id="@id/checkboxRecentWatch" android:layout_marginTop="8.0dip" android:checked="true" android:text="@string/recent_watch" style="@style/CheckBoxStyle" />
+                <CheckBox android:id="@id/checkboxParentalControl" android:visibility="visible" android:layout_marginTop="8.0dip" android:checked="true" android:text="@string/parental_control" android:layout_marginStart="8.0dip" style="@style/CheckBoxStyle" />
+                <CheckBox android:id="@id/checkboxExternalPlayer" android:layout_marginTop="8.0dip" android:checked="true" android:text="@string/external_player" android:layout_marginStart="8.0dip" style="@style/CheckBoxStyle" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_marginStart="@dimen/_10sdp" android:layout_marginEnd="20.0dip">
+                <TextView android:textSize="@dimen/_9ssp" android:textColor="@color/colorAccent" android:id="@id/tvPath" android:maxLines="3" android:layout_weight="1.0" style="@style/TextViewDescription" />
+                <Button android:id="@id/btnBrowse" android:layout_width="130.0dip" android:layout_height="wrap_content" android:text="@string/browse" style="@style/button_two_focus" />
+            </LinearLayout>
+            <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="30.0dip" android:layout_marginStart="30.0dip" android:layout_marginEnd="30.0dip" layout="@layout/button_layout" />
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout android:id="@id/rl_ads" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+</RelativeLayout>

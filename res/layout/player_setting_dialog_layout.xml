@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" app:cardBackgroundColor="@color/colorWhite" app:cardCornerRadius="@dimen/_5sdp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:padding="@dimen/_10sdp" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textColor="@color/colorBlack" android:id="@id/tvAudioTrack" android:padding="@dimen/_4sdp" android:text="@string/audio_tracks" android:drawablePadding="@dimen/_10sdp" android:drawableStart="@drawable/ic_audio_black" style="@style/TextViewSmallTitle" />
+        <include layout="@layout/line_layout" />
+        <TextView android:textColor="@color/colorBlack" android:id="@id/tvVideoTrack" android:padding="@dimen/_4sdp" android:layout_marginTop="@dimen/_10sdp" android:text="@string/video_tracks" android:drawablePadding="@dimen/_10sdp" android:drawableStart="@drawable/ic_play_placeholder_black" style="@style/TextViewSmallTitle" />
+        <include layout="@layout/line_layout" />
+        <TextView android:textColor="@color/colorBlack" android:id="@id/tvSubtitleTrack" android:padding="@dimen/_4sdp" android:layout_marginTop="@dimen/_10sdp" android:text="@string/subtitles_tracks" android:drawablePadding="@dimen/_10sdp" android:drawableStart="@drawable/ic_subtitle_selected" style="@style/TextViewSmallTitle" />
+        <include layout="@layout/line_layout" />
+        <TextView android:textColor="@color/colorBlack" android:id="@id/tvClose" android:padding="@dimen/_4sdp" android:layout_marginTop="@dimen/_10sdp" android:text="@string/close" android:drawablePadding="@dimen/_10sdp" android:drawableStart="@drawable/ic_cancel_black" style="@style/TextViewSmallTitle" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

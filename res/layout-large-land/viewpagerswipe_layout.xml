@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/rl_videolayout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.flaviofaria.kenburnsview.KenBurnsView android:id="@id/iv_videoimage_motion" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+            <RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <ProgressBar android:id="@id/video_progrssbar" android:visibility="gone" android:layout_width="72.0dip" android:layout_height="72.0dip" android:layout_marginBottom="@dimen/_50sdp" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/rl_shadow" android:background="@drawable/theme_one_shadow" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <LinearLayout android:layout_gravity="bottom" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/_45sdp">
+            <TextView android:layout_gravity="bottom" android:id="@id/tv_movie_name" android:layout_marginBottom="@dimen/spacing_20" android:text="Movie" style="@style/TextViewHeading" />
+            <LinearLayout android:gravity="center" android:layout_gravity="bottom" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_add_playlist" android:background="@drawable/selector_box_white_thin" android:padding="4.0dip" android:focusable="true" android:nextFocusLeft="@id/ll_play" android:nextFocusRight="@id/ll_info" android:layout_width="90.0dip" android:layout_height="wrap_content" android:elevation="@dimen/_10sdp">
+                    <ImageView android:layout_width="20.0dip" android:layout_height="20.0dip" app:srcCompat="@drawable/ic_plus_white" />
+                    <TextView android:textSize="12.0sp" android:gravity="center" android:layout_marginTop="5.0dip" android:text="@string/playlist" style="@style/TextViewDescription" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_info" android:background="@drawable/selector_box_white_thin" android:padding="4.0dip" android:focusable="true" android:visibility="visible" android:nextFocusLeft="@id/ll_playlist" android:nextFocusRight="@id/ll_heart_favourite" android:layout_width="100.0dip" android:layout_height="wrap_content" android:layout_marginStart="@dimen/_10sdp" android:elevation="@dimen/_10sdp">
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:background="@color/colorWhite" android:layout_width="fill_parent" android:layout_height="@dimen/spacing_35">
+                        <ImageView android:layout_width="@dimen/spacing_15" android:layout_height="@dimen/spacing_15" android:tint="@color/colorBlack" android:layout_marginStart="5.0dip" app:srcCompat="@drawable/ic_play" />
+                        <TextView android:textColor="@color/colorBlack" android:gravity="center" android:text="@string/play" android:layout_marginStart="@dimen/spacing_5" style="@style/TextViewDescription" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_heart_favourite" android:tag="3" android:background="@drawable/selector_box_white_thin" android:padding="4.0dip" android:focusable="true" android:nextFocusLeft="@id/ll_info" android:nextFocusRight="@id/ll_playlist" android:layout_width="@dimen/_80sdp" android:layout_height="wrap_content" android:layout_marginStart="@dimen/_10sdp" android:elevation="@dimen/_10sdp">
+                    <ImageView android:id="@id/iv_favourite_heart" android:layout_width="20.0dip" android:layout_height="20.0dip" android:elevation="@dimen/spacing_10" app:srcCompat="@drawable/ic_heart_unselected" />
+                    <TextView android:gravity="center" android:id="@id/tv_favourite" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/favorite" style="@style/TextViewDescription" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

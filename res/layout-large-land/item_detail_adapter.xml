@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/ll_outer" android:background="@drawable/selector_box_white_thin" android:paddingTop="@dimen/_4sdp" android:paddingBottom="@dimen/_2sdp" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginBottom="2.0dip" android:baselineAligned="false" android:paddingStart="8.0dip" android:paddingEnd="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/placeholder" android:layout_width="160.0dip" android:layout_height="90.0dip">
+        <ImageView android:layout_gravity="center" android:id="@id/iv_video_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+        <TextView android:textSize="20.0sp" android:textColor="@android:color/white" android:gravity="end" android:id="@id/tv_duration" android:background="@android:color/black" android:padding="2.0dip" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="20.12.22" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true" android:elevation="15.0dip" style="@style/TextViewMedium" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textSize="20.0sp" android:textColor="@color/Grey_900" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tv_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="folder" android:maxLines="3" android:paddingStart="5.0dip" android:paddingEnd="2.0dip" style="@style/TextViewMedium" />
+        <TextView android:id="@id/tv_size" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="1" android:paddingStart="5.0dip" android:paddingEnd="2.0dip" style="@style/TextViewDescription" />
+    </LinearLayout>
+</LinearLayout>

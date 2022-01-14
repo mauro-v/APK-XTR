@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/rl_videolayout" android:background="#ff292929" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.flaviofaria.kenburnsview.KenBurnsView android:id="@id/ivBackdrop" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true">
+        <RelativeLayout android:id="@id/rl_shadow" android:background="@drawable/shaded_background" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <LinearLayout android:id="@id/ll_play" android:background="@drawable/selector_box_white_thin" android:padding="@dimen/_10sdp" android:focusable="true" android:focusableInTouchMode="true" android:nextFocusUp="@id/iv_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <ImageView android:id="@id/iv_play" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:elevation="@dimen/_10sdp" app:srcCompat="@drawable/ic_play_placeholder" />
+        </LinearLayout>
+        <TextView android:id="@id/tv_movie_name" android:layout_marginTop="@dimen/spacing_10" android:text="Movie" android:layout_below="@id/ll_play" android:layout_centerHorizontal="true" style="@style/TextViewHeading" />
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:layout_alignParentBottom="true" layout="@layout/fav_playlist_info_trailer_layout" />
+    </RelativeLayout>
+    <ProgressBar android:id="@id/video_progrssbar" android:layout_width="72.0dip" android:layout_height="72.0dip" android:layout_centerInParent="true" />
+</RelativeLayout>

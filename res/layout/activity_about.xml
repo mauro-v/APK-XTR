@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:fillViewport="true" style="@style/parentStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout style="@style/parentStyle">
+        <include android:id="@id/appbar" layout="@layout/app_bar_third" />
+        <TextView android:textSize="@dimen/_20ssp" android:textColor="@color/colorAccent" android:layout_gravity="center" android:id="@id/tv_" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/devcoder" android:layout_centerHorizontal="true" style="@style/TextViewHeading" />
+        <include layout="@layout/progress_bar" />
+        <ImageView android:id="@id/iv_app_logo" android:background="@color/transparent" android:layout_width="fill_parent" android:layout_height="150.0dip" android:src="@drawable/ic_app_logo" android:layout_below="@id/appbar" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="@dimen/_20sdp" android:textColor="@android:color/white" android:layout_gravity="center" android:id="@id/tvAppName" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_name" android:layout_below="@id/iv_app_logo" android:layout_centerHorizontal="true" android:fontFamily="@font/spacequest" />
+        <TextView android:textSize="@dimen/_14sdp" android:textColor="@android:color/white" android:layout_gravity="center" android:id="@id/tv_app_version" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/version" android:layout_below="@id/tvAppName" android:layout_centerHorizontal="true" style="@style/TextViewSemiBold" />
+        <TextView android:textSize="@dimen/_14sdp" android:textColor="@color/colorAccent" android:layout_gravity="center" android:id="@id/tv_contact" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/contact_us" android:layout_below="@id/tv_app_version" android:layout_centerHorizontal="true" style="@style/TextViewSemiBold" />
+        <LinearLayout android:gravity="center" android:id="@id/ll_contact" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_2sdp" android:layout_below="@id/tv_contact">
+            <ImageView android:id="@id/ivSkype" android:padding="10.0dip" android:layout_width="@dimen/_50sdp" android:layout_height="@dimen/_50sdp" android:src="@drawable/ic_sky_logo" />
+            <ImageView android:id="@id/ivGram" android:padding="10.0dip" android:layout_width="@dimen/_50sdp" android:layout_height="@dimen/_50sdp" android:src="@drawable/ic_gram_logo" android:layout_marginStart="@dimen/_20sdp" />
+            <ImageView android:id="@id/ivTele" android:padding="10.0dip" android:layout_width="@dimen/_50sdp" android:layout_height="@dimen/_50sdp" android:src="@drawable/ic_telegram" android:layout_marginStart="@dimen/_20sdp" />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/_20sdp" android:layout_marginBottom="@dimen/_20sdp" android:layout_below="@id/ll_contact" android:layout_marginStart="@dimen/_10sdp" android:layout_marginEnd="@dimen/_10sdp" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </RelativeLayout>
+</ScrollView>

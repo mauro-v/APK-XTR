@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.tuyenmonkey.mkloader.MKLoader android:layout_width="100.0dip" android:layout_height="100.0dip" app:mk_color="?colorAccent" app:mk_type="TwinFishesSpinner" />
+    </RelativeLayout>
+</RelativeLayout>

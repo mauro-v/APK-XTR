@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" style="@style/parentStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/appbar" layout="@layout/app_bar_second" />
+    <TextView android:id="@id/title" android:layout_marginTop="@dimen/_5sdp" android:text="@string/select_language" android:layout_below="@id/appbar" android:textAllCaps="true" android:layout_marginStart="@dimen/_30sdp" style="@style/TextViewTitle" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:layout_above="@id/rl_ads" android:layout_below="@id/title">
+        <RadioGroup android:id="@id/rg_language" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_10sdp" android:layout_marginBottom="@dimen/_10sdp" android:paddingStart="@dimen/_20sdp" android:paddingEnd="@dimen/_20sdp" android:layout_marginStart="@dimen/_20sdp" android:layout_marginEnd="@dimen/_20sdp" />
+    </ScrollView>
+    <RelativeLayout android:id="@id/rl_ads" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+</RelativeLayout>

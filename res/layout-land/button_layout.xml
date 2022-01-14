@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginTop="@dimen/_10sdp" android:layout_marginStart="@dimen/_5sdp" android:layout_marginEnd="@dimen/_5sdp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <Button android:id="@id/btn_positive" android:layout_width="0.0dip" android:text="@string/save" android:layout_weight="1.0" style="@style/button_one" />
+    <Button android:id="@id/btn_negative" android:layout_width="0.0dip" android:text="@string/cancel" android:layout_weight="1.0" android:layout_marginStart="@dimen/_20sdp" style="@style/button_two" />
+</LinearLayout>

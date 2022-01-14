@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_gravity="bottom" android:layout_width="@dimen/_35sdp" android:layout_height="fill_parent" android:layout_alignParentBottom="true" android:elevation="@dimen/_10sdp" app:cardBackgroundColor="?colorMainBackground" app:cardElevation="@dimen/_12sdp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_bottom_navigation" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_home" android:tag="3" android:background="@drawable/newdashboard_ripple_effter" android:focusable="true" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_home" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_home_unselected" />
+            <TextView android:textColor="@color/colorGrey" android:gravity="center" android:id="@id/tv_home" android:text="@string/home" style="@style/TextViewLittleSmallTitle" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_movie" android:background="@drawable/newdashboard_ripple_effter" android:focusable="true" android:nextFocusLeft="@id/iv_sort" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_movie" android:layout_width="fill_parent" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_movies_unselected" />
+            <TextView android:textColor="@color/colorGrey" android:gravity="center" android:id="@id/tv_movie" android:text="@string/movies" style="@style/TextViewLittleSmallTitle" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_series" android:background="@drawable/newdashboard_ripple_effter" android:focusable="true" android:nextFocusLeft="@id/iv_sort" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <ImageView android:id="@id/iv_series" android:layout_width="fill_parent" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_series_unselected" />
+            <TextView android:textColor="@color/colorGrey" android:gravity="center" android:id="@id/tv_series" android:text="@string/series" style="@style/TextViewLittleSmallTitle" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_live" android:background="@drawable/newdashboard_ripple_effter" android:focusable="true" android:nextFocusLeft="@id/iv_sort" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <ImageView android:id="@id/iv_live" android:layout_width="fill_parent" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_live_unselected" />
+            <TextView android:textColor="@color/colorGrey" android:gravity="center" android:id="@id/tvLive" android:text="@string/live" style="@style/TextViewLittleSmallTitle" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_playlist" android:background="@drawable/newdashboard_ripple_effter" android:focusable="true" android:nextFocusLeft="@id/iv_sort" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <ImageView android:id="@id/iv_playlist" android:layout_width="fill_parent" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_playlist_unselected" />
+            <TextView android:textColor="@color/colorGrey" android:gravity="center" android:id="@id/tv_playlist" android:text="@string/playlist" style="@style/TextViewLittleSmallTitle" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_more" android:background="@drawable/newdashboard_ripple_effter" android:focusable="true" android:visibility="visible" android:nextFocusLeft="@id/iv_sort" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <ImageView android:id="@id/iv_more" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_menu_unselected" />
+            <TextView android:textColor="@color/colorGrey" android:gravity="center" android:id="@id/tv_more" android:text="@string/more" style="@style/TextViewLittleSmallTitle" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

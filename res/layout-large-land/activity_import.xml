@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:orientation="vertical" android:weightSum="10.0" style="@style/parentStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:weightSum="2.0" android:layout_marginStart="@dimen/_10sdp" android:layout_marginEnd="@dimen/_10sdp" style="@style/parentStyle">
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="0.8">
+            <com.tuyenmonkey.mkloader.MKLoader android:padding="@dimen/_10sdp" android:layout_width="fill_parent" android:layout_height="200.0dip" android:layout_marginTop="40.0dip" android:layout_weight="4.0" android:layout_centerInParent="true" app:mk_color="?colorAccent" app:mk_type="Sharingan" />
+            <RelativeLayout android:id="@id/rl_ads" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:weightSum="10.0" android:layout_weight="1.2" style="@style/parentStyle">
+            <TextView android:textSize="18.0sp" android:textColor="@android:color/white" android:gravity="center" android:background="@drawable/accent_box" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="60.0dip" android:text="@string/update_media_content" android:maxLines="4" android:layout_marginStart="@dimen/_20sdp" android:layout_marginEnd="@dimen/_20sdp" style="@style/TextViewSmallTitle" />
+            <LinearLayout android:id="@id/ll_status_bar" android:layout_width="fill_parent" android:layout_height="100.0dip" android:layout_marginTop="5.0dip" android:layout_marginStart="@dimen/_20sdp" android:layout_marginEnd="@dimen/_20sdp">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/shape_opo_background" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <TextView android:textSize="18.0sp" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/movies" style="@style/TextViewSmallTitle" />
+                    <TextView android:textSize="12.0sp" android:gravity="center" android:id="@id/tvMovieStatus" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/updating" style="@style/TextViewSemiBold" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/shape_opo_background" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_marginStart="@dimen/_10sdp">
+                    <TextView android:textSize="18.0sp" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/series" style="@style/TextViewSmallTitle" />
+                    <TextView android:textSize="12.0sp" android:gravity="center" android:id="@id/tvSeriesStatus" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/updating" style="@style/TextViewSemiBold" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_live" android:background="@drawable/shape_opo_background" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" android:layout_marginStart="@dimen/_10sdp">
+                    <TextView android:textSize="18.0sp" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/live" style="@style/TextViewSmallTitle" />
+                    <TextView android:textSize="12.0sp" android:gravity="center" android:id="@id/tvLiveStatus" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/updating" style="@style/TextViewSemiBold" />
+                </LinearLayout>
+            </LinearLayout>
+            <ImageView android:id="@id/iv_app_logo" android:background="@color/transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:src="@drawable/ic_app_logo" android:layout_weight="2.0" />
+            <TextView android:textSize="18.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/tv_setting_streams" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/Import_message" android:maxLines="4" android:layout_weight="1.0" android:paddingStart="20.0dip" android:paddingEnd="20.0dip" style="@style/TextViewSmallTitle" />
+            <TextView android:textAppearance="?android:textAppearanceLarge" android:textSize="20.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/tv_importing_streams" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_40sdp" android:text="@string/downloads_movies" android:maxLines="4" android:layout_weight="1.0" style="@style/TextViewSmallTitle" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/llStatus" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_10sdp">
+                <TextView android:gravity="center" android:id="@id/tvStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/status" style="@style/TextViewTitle" />
+                <TextView android:gravity="center" android:id="@id/tvLoading" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="5.0dip" style="@style/TextViewMedium" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

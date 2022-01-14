@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" style="@style/parentStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_above="@id/rl_ads" style="@style/parentStyle">
+        <include android:id="@id/appbar" layout="@layout/app_bar_third" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/profileImage" android:background="@color/colorAccent" android:padding="@dimen/_10sdp" android:layout_width="@dimen/_80sdp" android:layout_height="@dimen/_80sdp" android:layout_centerInParent="true" app:srcCompat="@drawable/ic_profile_eyes" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="center_horizontal" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:elevation="@dimen/_6sdp">
+            <TextView android:textColor="@color/textColorPrimary" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/account_username" style="@style/TextViewSmallTitle" />
+            <TextView android:textColor="@color/textColorPrimary" android:gravity="center" android:id="@id/tv_username" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="N/A" android:paddingStart="@dimen/_10sdp" style="@style/TextViewDescription" />
+        </LinearLayout>
+        <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/_10sdp" android:layout_marginStart="20.0dip" android:layout_marginEnd="20.0dip">
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:background="?colorPrimary" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_6sdp" android:elevation="@dimen/_10sdp">
+                        <TextView android:textColor="@color/textColorPrimary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/account_status" android:layout_weight="1.0" style="@style/TextViewSmallTitle" />
+                        <TextView android:textColor="@color/textColorPrimary" android:gravity="end" android:id="@id/tv_account_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="N/A" android:paddingEnd="@dimen/_10sdp" style="@style/TextViewDescription" />
+                    </LinearLayout>
+                    <LinearLayout android:background="?colorPrimary" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_6sdp" android:elevation="@dimen/_10sdp">
+                        <TextView android:textColor="@color/textColorPrimary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/account_expiry_date" android:layout_weight="1.0" style="@style/TextViewSmallTitle" />
+                        <TextView android:textColor="@color/textColorPrimary" android:gravity="end" android:id="@id/tv_expriy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="N/A" android:paddingEnd="@dimen/_10sdp" style="@style/TextViewDescription" />
+                    </LinearLayout>
+                    <LinearLayout android:background="?colorPrimary" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_6sdp" android:elevation="@dimen/_10sdp">
+                        <TextView android:textColor="@color/textColorPrimary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/is_trail" android:layout_weight="1.0" style="@style/TextViewSmallTitle" />
+                        <TextView android:textColor="@color/textColorPrimary" android:gravity="end" android:id="@id/tv_istrail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="N/A" android:paddingEnd="@dimen/_10sdp" style="@style/TextViewDescription" />
+                    </LinearLayout>
+                    <LinearLayout android:background="?colorPrimary" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_6sdp" android:elevation="@dimen/_10sdp">
+                        <TextView android:textColor="@color/textColorPrimary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/account_active_connections" android:layout_weight="1.0" style="@style/TextViewSmallTitle" />
+                        <TextView android:textColor="@color/textColorPrimary" android:gravity="end" android:id="@id/tv_active_connection" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="N/A" android:paddingEnd="@dimen/_10sdp" style="@style/TextViewDescription" />
+                    </LinearLayout>
+                    <LinearLayout android:background="?colorPrimary" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_6sdp" android:elevation="@dimen/_10sdp">
+                        <TextView android:textColor="@color/textColorPrimary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/created_at" android:layout_weight="1.0" style="@style/TextViewSmallTitle" />
+                        <TextView android:textColor="@color/textColorPrimary" android:gravity="end" android:id="@id/tv_created_at" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="N/A" android:paddingEnd="@dimen/_10sdp" style="@style/TextViewDescription" />
+                    </LinearLayout>
+                    <LinearLayout android:background="?colorPrimary" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_6sdp" android:elevation="@dimen/_10sdp">
+                        <TextView android:textColor="@color/textColorPrimary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/account_max_connections" android:layout_weight="1.0" style="@style/TextViewSmallTitle" />
+                        <TextView android:textColor="@color/textColorPrimary" android:gravity="end" android:id="@id/tv_max_connection" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="N/A" android:paddingEnd="@dimen/_10sdp" style="@style/TextViewDescription" />
+                    </LinearLayout>
+                </LinearLayout>
+                <include layout="@layout/button_layout" />
+                <ProgressBar android:layout_gravity="center" android:id="@id/progressBar" android:visibility="gone" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginTop="10.0dip" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+    <RelativeLayout android:id="@id/rl_ads" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+</RelativeLayout>

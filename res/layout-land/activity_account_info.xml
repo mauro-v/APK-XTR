@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="?colorMainBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/appbar" layout="@layout/app_bar_third" />
+    <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/appbar" android:layout_centerInParent="true">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:background="@drawable/shape_opo_background" android:paddingTop="@dimen/_20sdp" android:paddingBottom="@dimen/_20sdp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/_10sdp" android:paddingStart="@dimen/_30sdp" android:paddingEnd="@dimen/_30sdp" android:layout_marginStart="90.0dip" android:layout_marginEnd="90.0dip">
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:elevation="@dimen/_6sdp">
+                <TextView android:textColor="@color/textColorPrimary" android:layout_width="300.0dip" android:layout_height="fill_parent" android:text="@string/account_username" style="@style/TextViewLittleSmallTitle" />
+                <TextView android:textColor="@color/textColorPrimary" android:id="@id/tv_username" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="N/A" style="@style/TextViewDescription" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_6sdp" android:elevation="@dimen/_10sdp">
+                <TextView android:textColor="@color/textColorPrimary" android:layout_width="300.0dip" android:layout_height="wrap_content" android:text="@string/account_status" style="@style/TextViewLittleSmallTitle" />
+                <TextView android:textColor="@color/textColorPrimary" android:id="@id/tv_account_status" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="N/A" style="@style/TextViewDescription" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_6sdp" android:elevation="@dimen/_10sdp">
+                <TextView android:textColor="@color/textColorPrimary" android:layout_width="300.0dip" android:layout_height="wrap_content" android:text="@string/account_expiry_date" style="@style/TextViewLittleSmallTitle" />
+                <TextView android:textColor="@color/textColorPrimary" android:id="@id/tv_expriy" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="N/A" style="@style/TextViewDescription" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_6sdp" android:elevation="@dimen/_10sdp">
+                <TextView android:textColor="@color/textColorPrimary" android:layout_width="300.0dip" android:layout_height="wrap_content" android:text="@string/is_trail" style="@style/TextViewLittleSmallTitle" />
+                <TextView android:textColor="@color/textColorPrimary" android:id="@id/tv_istrail" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="N/A" style="@style/TextViewDescription" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_6sdp" android:elevation="@dimen/_10sdp">
+                <TextView android:textColor="@color/textColorPrimary" android:layout_width="300.0dip" android:layout_height="wrap_content" android:text="@string/account_active_connections" style="@style/TextViewLittleSmallTitle" />
+                <TextView android:textColor="@color/textColorPrimary" android:id="@id/tv_active_connection" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="N/A" style="@style/TextViewDescription" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_6sdp" android:elevation="@dimen/_10sdp">
+                <TextView android:textColor="@color/textColorPrimary" android:layout_width="300.0dip" android:layout_height="wrap_content" android:text="@string/created_at" style="@style/TextViewLittleSmallTitle" />
+                <TextView android:textColor="@color/textColorPrimary" android:id="@id/tv_created_at" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="N/A" style="@style/TextViewDescription" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_6sdp" android:layout_marginBottom="10.0dip" android:elevation="@dimen/_10sdp">
+                <TextView android:textColor="@color/textColorPrimary" android:layout_width="300.0dip" android:layout_height="wrap_content" android:text="@string/account_max_connections" style="@style/TextViewLittleSmallTitle" />
+                <TextView android:textColor="@color/textColorPrimary" android:id="@id/tv_max_connection" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="N/A" style="@style/TextViewDescription" />
+            </LinearLayout>
+            <include layout="@layout/button_layout" />
+            <ProgressBar android:layout_gravity="center" android:id="@id/progressBar" android:visibility="gone" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginTop="10.0dip" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <RelativeLayout android:id="@id/rl_ads" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

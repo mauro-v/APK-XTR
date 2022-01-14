@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:layout_gravity="center" android:id="@id/ll_checkbox" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp" android:layout_marginStart="@dimen/_20sdp" android:layout_marginEnd="@dimen/_20sdp">
+        <CheckBox android:textColor="@color/Grey_400" android:gravity="center" android:id="@id/checkbox" android:background="@drawable/selector_accent_box" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/_10sdp" android:buttonTint="@color/white" />
+        <TextView android:textSize="@dimen/_14sdp" android:id="@id/tvTerms" android:background="@drawable/selector_accent_box" android:paddingTop="@dimen/_2sdp" android:paddingBottom="@dimen/_2sdp" android:focusable="true" android:nextFocusLeft="@id/checkbox" android:nextFocusRight="@id/checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/accept_terms" android:paddingStart="@dimen/_5sdp" android:paddingEnd="@dimen/_2sdp" android:layout_marginEnd="@dimen/_10sdp" style="@style/TextViewSmallDescription" />
+    </LinearLayout>
+    <include android:layout_width="250.0dip" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_40sdp" android:layout_marginStart="@dimen/_20sdp" android:layout_marginEnd="@dimen/_20sdp" layout="@layout/button_layout" />
+</LinearLayout>

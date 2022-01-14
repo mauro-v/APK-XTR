@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" style="@style/parentStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/app_bar_second" />
+    <RelativeLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/_20sdp" android:layout_above="@id/rl_ads" android:paddingStart="@dimen/_20sdp" android:paddingEnd="@dimen/_20sdp">
+            <TextView android:text="@string/select_theme" android:textAllCaps="true" style="@style/TextViewTitle" />
+            <RadioGroup android:id="@id/radioGroup" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/_20sdp" android:paddingEnd="@dimen/_20sdp">
+                <RadioButton android:id="@id/radio_theme1" android:text="@string/sort_default" style="@style/RadioButtonStyle" />
+                <RadioButton android:id="@id/radio_theme2" android:text="@string/theme_second" style="@style/RadioButtonStyle" />
+                <RadioButton android:id="@id/radio_theme3" android:text="@string/theme_third" style="@style/RadioButtonStyle" />
+                <RadioButton android:id="@id/radio_theme4" android:text="@string/theme_fourth" style="@style/RadioButtonStyle" />
+                <RadioButton android:id="@id/radio_theme5" android:visibility="gone" android:text="@string/theme_five" style="@style/RadioButtonStyle" />
+            </RadioGroup>
+        </LinearLayout>
+        <RelativeLayout android:id="@id/rl_ads" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</LinearLayout>

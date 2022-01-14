@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/parentStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/appbar" layout="@layout/categories_appbar_layout" />
+    <include layout="@layout/no_data_found_layout" />
+    <include android:id="@id/include_progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" layout="@layout/spinkitanimation" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:paddingLeft="2.0dip" android:paddingBottom="@dimen/_10sdp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/appbar" android:paddingStart="2.0dip" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+</RelativeLayout>

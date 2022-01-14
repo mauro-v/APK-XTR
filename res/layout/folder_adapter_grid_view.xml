@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/ll_outer" android:background="@drawable/ripple_effect_item" android:padding="@dimen/_2sdp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:baselineAligned="false" android:layout_weight="5.0"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center" android:id="@id/iv_folder" android:layout_width="@dimen/_20sdp" android:layout_height="@dimen/_20sdp" app:srcCompat="@drawable/ic_folder" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="14.0sp" android:ellipsize="end" android:gravity="center" android:id="@id/tv_folder_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="folder" android:maxLines="2" style="@style/TextViewSemiBold" />
+        <TextView android:textColor="@color/Grey_400" android:gravity="center" android:id="@id/tv_total_item" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="30 Media file " android:maxLines="1" style="@style/TextViewDescription" />
+    </LinearLayout>
+</LinearLayout>

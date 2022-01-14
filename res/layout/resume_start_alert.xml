@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/black_background" android:padding="@dimen/_12sdp" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="end" android:id="@id/ic_cancel" android:padding="@dimen/_6sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_cancel" />
+    <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/colorWhite" android:ellipsize="end" android:layout_gravity="center_horizontal" android:id="@id/tv_video_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_3sdp" android:text="Video Name" android:maxLines="2" style="@style/TextViewSmallTitle" />
+    <TextView android:textSize="16.0sp" android:textColor="@color/colorWhite" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_10sdp" android:text="@string/do_you_wish_to_resume_from_where_you_stopped" android:paddingStart="@dimen/_8sdp" android:paddingEnd="@dimen/_8sdp" style="@style/TextViewDescription" />
+    <include layout="@layout/button_layout" />
+</LinearLayout>

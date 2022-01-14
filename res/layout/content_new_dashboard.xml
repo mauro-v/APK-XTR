@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:configChanges="orientation" android:orientation="vertical" android:id="@id/parentView" android:background="?colorMainBackground" android:focusableInTouchMode="false" android:fitsSystemWindows="false" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.drawerlayout.widget.DrawerLayout android:id="@id/drawer" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <FrameLayout android:orientation="vertical" android:id="@id/container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="52.0dip" />
+            <include layout="@layout/dashboard_appbar_layout" />
+            <fragment android:layout_gravity="bottom" android:id="@id/castMiniController" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/_45sdp" android:layout_above="@id/include_bottom" android:layout_alignParentBottom="true" class="com.google.android.gms.cast.framework.media.widget.MiniControllerFragment" />
+            <include android:id="@id/include_bottom" layout="@layout/bottom_navigation_layout" />
+        </RelativeLayout>
+        <LinearLayout android:layout_gravity="start" android:orientation="vertical" android:id="@id/ll_drawer" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </androidx.drawerlayout.widget.DrawerLayout>
+</RelativeLayout>

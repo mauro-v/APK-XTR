@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" style="@style/parentStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/_2sdp">
+        <include layout="@layout/appbar" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" />
+        <include android:id="@id/no_data_layout" android:visibility="gone" layout="@layout/no_data_found_layout" />
+    </LinearLayout>
+    <include android:visibility="gone" layout="@layout/bottom_navigation_layout" />
+</RelativeLayout>

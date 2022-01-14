@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/play_with_vlc" android:title="@string/play_with_vlc_player" />
+    <item android:id="@id/play_with_mx" android:title="@string/play_with_mx_player" />
+    <item android:id="@id/download" android:visible="false" android:title="@string/download" />
+    <item android:id="@id/unfavorite" android:visible="false" android:title="@string/remove_from_fav" />
+    <item android:id="@id/favoirte" android:visible="false" android:title="@string/add_to_favourite" />
+    <item android:id="@id/move_to" android:visible="false" android:title="@string/move_to" />
+    <item android:id="@id/copy_to" android:title="@string/copy_to" />
+    <item android:id="@id/remove_from_playlist" android:title="@string/remove_from_playlist" />
+    <item android:id="@id/play_with_cast" android:visible="false" android:title="@string/play_with_cast" />
+</menu>

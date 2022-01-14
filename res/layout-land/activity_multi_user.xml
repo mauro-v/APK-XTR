@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/parentStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/appbar" layout="@layout/app_bar_second" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_5sdp" android:layout_below="@id/appbar" android:layout_marginStart="@dimen/_15sdp" android:layout_marginEnd="@dimen/_15sdp" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_empty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_add_user" android:background="@drawable/shape_opo_background" android:padding="@dimen/_10sdp" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:id="@id/ivAddBig" android:layout_width="@dimen/_40sdp" android:layout_height="@dimen/_40sdp" android:src="@drawable/ic_big_cancel" android:contentDescription="@string/add_user" android:rotation="45.0" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_10sdp" android:text="@string/add_user" style="@style/TextViewTitle" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_restore_backup" android:background="@drawable/shape_opo_background" android:padding="@dimen/_10sdp" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="40.0dip">
+            <ImageView android:layout_width="@dimen/_40sdp" android:layout_height="@dimen/_40sdp" android:src="@drawable/ic_restore" android:contentDescription="@string/add_user" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_10sdp" android:text="@string/restore" style="@style/TextViewTitle" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

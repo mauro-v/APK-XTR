@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/ll_bottom" android:background="#00000000" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="@dimen/_50sdp" android:weightSum="2.0" android:layout_alignParentBottom="true" android:elevation="@dimen/_10sdp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_video" android:background="@drawable/shape_drawer_left" android:visibility="visible" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ImageView android:id="@id/iv_video" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_video_unselected" />
+        <TextView android:textSize="@dimen/_10ssp" android:textColor="@color/colorAccent" android:id="@id/tvVideo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/videos" style="@style/TextViewSmallTitle" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_audio" android:background="@drawable/shape_drawer_right" android:visibility="visible" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ImageView android:id="@id/iv_audio" android:focusable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_audio_unselected" />
+        <TextView android:textSize="@dimen/_10ssp" android:textColor="@color/colorAccent" android:id="@id/tvAudio" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/audio" style="@style/TextViewSmallTitle" />
+    </LinearLayout>
+</LinearLayout>

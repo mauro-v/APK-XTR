@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/rlOuter" android:background="@drawable/selector_box_white_thin" android:padding="@dimen/_1sdp" android:focusable="true" android:layout_width="fill_parent" android:layout_height="@dimen/_40sdp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textColor="@color/textColorPrimary" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tv_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Movie Title" android:maxLines="1" android:layout_centerVertical="true" android:paddingStart="@dimen/_2sdp" android:paddingEnd="@dimen/_5sdp" android:layout_marginStart="2.0dip" android:layout_toStartOf="@id/ivLock" style="@style/TextViewSmallTitle" />
+    <ImageView android:id="@id/ivLock" android:background="@drawable/selector_box_white_thin" android:padding="2.0dip" android:focusable="true" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/_10sdp" android:layout_alignParentEnd="true" app:srcCompat="@drawable/ic_unlock" />
+    <include android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_alignParentBottom="true" layout="@layout/line_layout" />
+</RelativeLayout>

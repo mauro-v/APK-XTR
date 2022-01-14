@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="?colorMainBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/ll_appbar" layout="@layout/progress_bar_layout" />
+    <include android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/ll_appbar" layout="@layout/no_data_found_layout" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layoutAnimation="@anim/layout_animation_up_to_down" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/_10sdp" android:layout_above="@id/rl_ads" android:layout_below="@id/ll_appbar" android:layout_marginStart="@dimen/_10sdp" />
+    <LinearLayout android:id="@id/ll_appbar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <include android:id="@id/toolbar" layout="@layout/nd_player_appbar" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_setting_permission" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/rl_ads" android:layout_below="@id/toolbar" android:paddingStart="50.0dip" android:paddingEnd="50.0dip">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_person_calling_a_taxi" />
+        <TextView android:textSize="18.0sp" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/grant_permission" style="@style/TextViewSemiBold" />
+        <Button android:id="@id/btn_grant" android:layout_width="150.0dip" android:layout_marginTop="20.0dip" android:text="@string/ok" style="@style/button_two" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_permission_required" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/rl_ads" android:layout_below="@id/toolbar" android:paddingStart="50.0dip" android:paddingEnd="50.0dip">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_person_calling_a_taxi" />
+        <TextView android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/permission_required" style="@style/TextViewSemiBold" />
+        <Button android:id="@id/btn_ok" android:layout_width="180.0dip" android:layout_marginTop="20.0dip" android:text="@string/ok" style="@style/button_two_focus" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/rl_ads" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+</RelativeLayout>

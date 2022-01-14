@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="?colorPrimaryDark" android:layout_width="fill_parent" android:layout_height="50.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/iv_back" android:background="@drawable/selector_app_bar_icon" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:paddingStart="@dimen/_10sdp" android:paddingEnd="@dimen/_10sdp" android:layout_marginStart="@dimen/_5sdp" app:srcCompat="@drawable/ic_back" />
+    <TextView android:gravity="start|center" android:id="@id/tv_title" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/title" android:layout_centerInParent="true" android:textAllCaps="true" android:layout_toStartOf="@id/ll_add" android:layout_toEndOf="@id/iv_back" style="@style/TextViewTitle" />
+    <LinearLayout android:id="@id/ll_add" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginEnd="@dimen/_10sdp" android:layout_alignParentEnd="true">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_add" android:visibility="visible" android:src="@drawable/ic_add_circle" android:contentDescription="@string/add_user" style="@style/ImageIconStyle" />
+        <TextView android:textColor="@color/colorWhite" android:gravity="center" android:id="@id/tvAdd" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/add_player" style="@style/TextViewDescription" />
+    </LinearLayout>
+</RelativeLayout>

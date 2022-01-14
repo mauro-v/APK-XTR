@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/parentStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/appbar" layout="@layout/app_bar_second" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/rl_ads" android:layout_below="@id/appbar" android:paddingStart="@dimen/_20sdp" android:paddingEnd="@dimen/_20sdp" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    <include android:id="@id/include_progress_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" layout="@layout/spinkitanimation" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_add_player" android:background="@drawable/selector_accent_box" android:padding="@dimen/_18sdp" android:focusable="true" android:visibility="visible" android:nextFocusLeft="@id/iv_add" android:nextFocusRight="@id/iv_add" android:nextFocusUp="@id/iv_add" android:nextFocusDown="@id/iv_add" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <ImageView android:id="@id/ivAddBig" android:layout_width="@dimen/_30sdp" android:layout_height="@dimen/_30sdp" android:src="@drawable/ic_big_cancel" android:contentDescription="@string/add_user" android:rotation="45.0" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_10sdp" android:text="@string/add_player" style="@style/TextViewTitle" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/rl_ads" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+</RelativeLayout>

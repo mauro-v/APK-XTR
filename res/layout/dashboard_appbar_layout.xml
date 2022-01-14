@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:id="@id/rl_appbar" android:background="?colorPrimaryDark" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginTop="@dimen/_15sdp" android:elevation="@dimen/_8sdp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/iv_menu" android:tint="@color/colorWhite" android:layout_marginStart="10.0dip" app:srcCompat="@drawable/ic_menu_unselected" style="@style/ImageIconStyle" />
+    <TextView android:textColor="@color/textColorPrimary" android:gravity="center_vertical" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/title" android:layout_centerInParent="true" android:textAllCaps="false" android:layout_toStartOf="@id/llOptions" android:layout_toEndOf="@id/iv_menu" style="@style/TextViewTitle" />
+    <LinearLayout android:gravity="center_vertical" android:id="@id/llOptions" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginEnd="@dimen/_8sdp" android:layout_alignParentEnd="true">
+        <TextView android:textSize="@dimen/_14ssp" android:textColor="@color/textColorPrimary" android:gravity="center" android:id="@id/tv_time" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/_10sdp" android:layout_marginEnd="20.0dip" style="@style/TextViewTitle" />
+        <TextView android:textColor="@color/textColorPrimary" android:gravity="center" android:id="@id/tv_date" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/_2sdp" android:layout_marginEnd="30.0dip" style="@style/TextViewDescription" />
+        <androidx.mediarouter.app.MediaRouteButton android:theme="@style/ToolBarStyle" android:id="@id/media_route_button" android:visibility="visible" android:layout_width="50.0dip" android:layout_height="fill_parent" android:mediaRouteTypes="user" />
+        <ImageView android:id="@id/ivVpn" android:visibility="gone" android:layout_width="24.0dip" android:layout_height="24.0dip" android:src="@drawable/ic_circle_green" android:layout_marginEnd="20.0dip" />
+        <ImageView android:id="@id/iv_search" android:visibility="visible" app:srcCompat="@drawable/ic_search" style="@style/ImageIconStyle" />
+        <ImageView android:id="@id/iv_sort" app:srcCompat="@drawable/ic_sort_big" style="@style/ImageIconStyle" />
+    </LinearLayout>
+</RelativeLayout>

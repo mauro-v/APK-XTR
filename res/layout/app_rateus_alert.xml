@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:layout_gravity="center" android:id="@id/ll_outer" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:gravity="center" android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/background_rounded" android:padding="@dimen/spacing_20" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_30">
+            <TextView android:textSize="25.0sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_30" android:text="@string/rate_us" style="@style/TextViewTitle" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_10">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/ic_star" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/spacing_10" app:srcCompat="@drawable/ic_star" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/spacing_10" app:srcCompat="@drawable/ic_star" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/spacing_10" app:srcCompat="@drawable/ic_star" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="@dimen/spacing_10" app:srcCompat="@drawable/ic_star" />
+            </LinearLayout>
+            <TextView android:textSize="15.0sp" android:textColor="@color/colorBlack" android:gravity="center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_15" android:text="@string/rate_us_message" android:paddingStart="@dimen/_5sdp" android:paddingEnd="@dimen/_5sdp" style="@style/TextViewDescription" />
+            <include layout="@layout/button_layout" />
+        </LinearLayout>
+        <FrameLayout android:background="@drawable/circular_oval" android:layout_width="@dimen/_60sdp" android:layout_height="@dimen/_60sdp" android:layout_centerHorizontal="true" android:foregroundGravity="center">
+            <ImageView android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:tint="@color/white" app:srcCompat="@drawable/ic_star" />
+        </FrameLayout>
+    </RelativeLayout>
+</LinearLayout>

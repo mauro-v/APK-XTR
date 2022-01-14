@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/parentStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/appbar" layout="@layout/app_bar_second" />
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/rl_ads" android:layout_below="@id/appbar">
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:background="@color/setting_foreground_color" android:paddingTop="10.0dip" android:paddingBottom="30.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:paddingStart="@dimen/_40sdp" android:paddingEnd="@dimen/_40sdp" android:layout_marginStart="@dimen/_40sdp" android:layout_marginEnd="@dimen/_40sdp">
+            <TextView android:textColor="@color/colorAccent" android:gravity="center" android:text="@string/select_media_player" style="@style/TextViewTitle" />
+            <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                <TextView android:layout_width="120.0dip" android:text="@string/live" style="@style/TextViewSmallTitle" />
+                <Spinner android:textColor="@color/colorWhite" android:gravity="center" android:id="@id/spinner_live" android:layout_width="fill_parent" android:paddingStart="@dimen/_8sdp" android:paddingEnd="@dimen/_8sdp" android:layout_marginStart="10.0dip" style="@style/mySpinnerItemStyle" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+                <TextView android:layout_width="120.0dip" android:text="@string/movies" style="@style/TextViewSmallTitle" />
+                <Spinner android:textColor="@color/colorWhite" android:gravity="center" android:id="@id/spinner_movie" android:layout_width="fill_parent" android:paddingStart="@dimen/_8sdp" android:paddingEnd="@dimen/_8sdp" android:layout_marginStart="10.0dip" style="@style/mySpinnerItemStyle" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+                <TextView android:layout_width="120.0dip" android:text="@string/series" style="@style/TextViewSmallTitle" />
+                <Spinner android:textColor="@color/colorWhite" android:gravity="center" android:id="@id/spinner_series" android:layout_width="fill_parent" android:paddingStart="@dimen/_8sdp" android:paddingEnd="@dimen/_8sdp" android:layout_marginStart="10.0dip" style="@style/mySpinnerItemStyle" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:id="@id/ll_catchup" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+                <TextView android:layout_width="120.0dip" android:text="@string/catch_up" style="@style/TextViewSmallTitle" />
+                <Spinner android:textColor="@color/colorWhite" android:gravity="center" android:id="@id/spinner_catchUp" android:layout_width="fill_parent" android:paddingStart="@dimen/_8sdp" android:paddingEnd="@dimen/_8sdp" android:layout_marginStart="10.0dip" style="@style/mySpinnerItemStyle" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout android:id="@id/rl_ads" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+</RelativeLayout>

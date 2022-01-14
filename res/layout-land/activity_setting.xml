@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" style="@style/parentStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_above="@id/rl_ads" style="@style/parentStyle">
+        <include layout="@layout/app_bar_second" />
+        <androidx.core.widget.NestedScrollView android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/_5sdp" android:paddingStart="@dimen/_20sdp" android:paddingEnd="@dimen/_20sdp">
+                <LinearLayout style="@style/LightForegroundStyle">
+                    <TextView android:textSize="@dimen/_10ssp" android:text="@string/stream_format" android:textAllCaps="true" style="@style/TextViewSmallTitle" />
+                    <RadioGroup android:orientation="horizontal" android:id="@id/radioGroupStreamFormat" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <RadioButton android:id="@id/radio_default_stream" android:text="@string/sort_default" style="@style/RadioButtonStyle" />
+                        <RadioButton android:id="@id/radio_ts" android:text="@string/mpeg_format" style="@style/RadioButtonStyle" />
+                        <RadioButton android:id="@id/radio_m3u8" android:text="@string/hls_format" style="@style/RadioButtonStyle" />
+                    </RadioGroup>
+                </LinearLayout>
+                <LinearLayout android:visibility="gone" style="@style/LightForegroundStyle">
+                    <TextView android:textSize="@dimen/_10ssp" android:text="@string/player_selection" android:textAllCaps="true" style="@style/TextViewSmallTitle" />
+                    <RadioGroup android:orientation="horizontal" android:id="@id/radioGroupPlayer" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <RadioButton android:id="@id/radio_default_player" android:text="@string/sort_default" style="@style/RadioButtonStyle" />
+                        <RadioButton android:id="@id/radio_native_player" android:text="@string/native_player" style="@style/RadioButtonStyle" />
+                        <RadioButton android:id="@id/radio_vlc" android:text="@string/vlc_player" style="@style/RadioButtonStyle" />
+                        <RadioButton android:id="@id/radio_mx" android:text="@string/mx_player" style="@style/RadioButtonStyle" />
+                    </RadioGroup>
+                </LinearLayout>
+                <LinearLayout style="@style/LightForegroundStyle">
+                    <TextView android:textSize="@dimen/_10ssp" android:text="@string/player_setting" android:textAllCaps="true" style="@style/TextViewSmallTitle" />
+                    <RadioGroup android:orientation="horizontal" android:id="@id/radioGroupDecoder" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <RadioButton android:id="@id/radio_hardware_decode" android:text="@string/hardware_decoder" style="@style/RadioButtonStyle" />
+                        <RadioButton android:id="@id/radio_software_decoder" android:text="@string/software_decoder" style="@style/RadioButtonStyle" />
+                    </RadioGroup>
+                    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <CheckBox android:textSize="@dimen/_10ssp" android:id="@id/checkbox_subtitle" android:layout_marginTop="@dimen/_8sdp" android:text="@string/enable_subtitle" style="@style/CheckBoxStyle" />
+                        <CheckBox android:textSize="@dimen/_10ssp" android:id="@id/checkbox_openSL" android:layout_marginTop="@dimen/_8sdp" android:text="@string/open_sl_ES" android:layout_below="@id/checkbox_subtitle" style="@style/CheckBoxStyle" />
+                        <CheckBox android:textSize="@dimen/_10ssp" android:id="@id/checkbox_openGL" android:layout_marginTop="@dimen/_8sdp" android:text="@string/open_gl" android:layout_toEndOf="@id/checkbox_subtitle" style="@style/CheckBoxStyle" />
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout style="@style/LightForegroundStyle">
+                    <TextView android:textSize="@dimen/_10ssp" android:text="@string/time_format" android:textAllCaps="true" style="@style/TextViewSmallTitle" />
+                    <RadioGroup android:orientation="horizontal" android:id="@id/radioGroupTimeFormat" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <RadioButton android:id="@id/radio_12" android:text="@string/time_format_12" style="@style/RadioButtonStyle" />
+                        <RadioButton android:id="@id/radio_24" android:text="@string/time_format_24" style="@style/RadioButtonStyle" />
+                    </RadioGroup>
+                </LinearLayout>
+                <LinearLayout style="@style/LightForegroundStyle">
+                    <TextView android:textSize="@dimen/_10ssp" android:text="@string/general_setting" android:textAllCaps="true" style="@style/TextViewSmallTitle" />
+                    <CheckBox android:id="@id/checkbox_auto_boot" android:layout_marginTop="@dimen/_8sdp" android:text="@string/auto_boot" style="@style/CheckBoxStyle" />
+                    <CheckBox android:textSize="@dimen/_10ssp" android:id="@id/checkbox_auto_play" android:layout_marginTop="@dimen/_8sdp" android:text="@string/auto_play" style="@style/CheckBoxStyle" />
+                    <CheckBox android:textSize="@dimen/_10ssp" android:id="@id/checkbox_auto_update" android:layout_marginTop="@dimen/_8sdp" android:text="@string/auto_update" style="@style/CheckBoxStyle" />
+                    <CheckBox android:textSize="@dimen/_10ssp" android:id="@id/checkbox_parental" android:layout_marginTop="@dimen/_8sdp" android:text="@string/hide_parental_locked_cat" style="@style/CheckBoxStyle" />
+                </LinearLayout>
+                <RelativeLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_20sdp" android:layout_marginBottom="@dimen/_10sdp" style="@style/LightForegroundStyle">
+                    <TextView android:gravity="center_vertical" android:id="@id/text_epg" android:layout_height="fill_parent" android:text="@string/epg_time_shift" android:textAllCaps="true" style="@style/TextViewSmallTitle" />
+                    <RelativeLayout android:gravity="center_vertical" android:layout_width="@dimen/_80sdp" android:layout_height="60.0dip" android:layout_marginTop="@dimen/_8sdp" android:layout_marginBottom="@dimen/_10sdp" android:layout_below="@id/text_epg" android:layout_marginStart="@dimen/_20sdp" android:layout_marginEnd="@dimen/_20sdp">
+                        <Spinner android:textColor="@color/colorWhite" android:gravity="center" android:entries="@array/epg_time_shift_array" android:id="@id/spinner" android:layout_width="@dimen/_80sdp" android:paddingStart="@dimen/_10sdp" android:paddingEnd="@dimen/_8sdp" style="@style/mySpinnerItemStyle" />
+                        <ImageView android:layout_width="@dimen/_10sdp" android:layout_height="@dimen/_10sdp" android:layout_centerVertical="true" android:layout_marginEnd="10.0dip" android:layout_alignParentEnd="true" app:srcCompat="@drawable/ic_down" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                <LinearLayout android:id="@id/ll_liveCustomisation" android:layout_marginBottom="@dimen/_10sdp" style="@style/LightForegroundStyle">
+                    <TextView android:textSize="@dimen/_12ssp" android:text="@string/live_customisation" android:textAllCaps="true" style="@style/TextViewTitle" />
+                    <CheckBox android:id="@id/checkbox_live_cat" android:layout_marginTop="@dimen/_8sdp" android:text="@string/show_live_category" style="@style/CheckBoxStyle" />
+                    <CheckBox android:id="@id/checkbox_channel_last_play" android:focusable="true" android:layout_marginTop="@dimen/_8sdp" android:text="@string/enable_last_play_channel" style="@style/CheckBoxStyle" />
+                    <CheckBox android:id="@id/checkbox_hide_all_live_cat" android:layout_marginTop="@dimen/_8sdp" android:text="@string/hide_all_cat_live" style="@style/CheckBoxStyle" />
+                    <CheckBox android:id="@id/checkbox_hide_live_tv" android:layout_marginTop="@dimen/_8sdp" android:text="@string/hide_live_tv" style="@style/CheckBoxStyle" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/ll_MovieCustomisation" android:layout_marginBottom="@dimen/_10sdp" style="@style/LightForegroundStyle">
+                    <TextView android:textSize="@dimen/_12ssp" android:text="@string/movie_customisation" android:textAllCaps="true" style="@style/TextViewTitle" />
+                    <CheckBox android:id="@id/checkbox_hide_all_movie_cat" android:layout_marginTop="@dimen/_8sdp" android:text="@string/hide_all_cat_movie" style="@style/CheckBoxStyle" />
+                    <CheckBox android:id="@id/checkbox_movie_cat" android:layout_marginTop="@dimen/_8sdp" android:text="@string/show_movie_category" style="@style/CheckBoxStyle" />
+                </LinearLayout>
+                <LinearLayout android:id="@id/ll_SeriesCustomisation" android:layout_marginBottom="@dimen/_10sdp" style="@style/LightForegroundStyle">
+                    <TextView android:textSize="@dimen/_12ssp" android:text="@string/series_customisation" android:textAllCaps="true" style="@style/TextViewTitle" />
+                    <CheckBox android:id="@id/checkbox_hide_all_Series_cat" android:layout_marginTop="@dimen/_8sdp" android:text="@string/hide_all_cat_series" style="@style/CheckBoxStyle" />
+                    <CheckBox android:id="@id/checkbox_series_cat" android:layout_marginTop="@dimen/_8sdp" android:text="@string/show_series_category" style="@style/CheckBoxStyle" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+    <RelativeLayout android:id="@id/rl_ads" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+</RelativeLayout>

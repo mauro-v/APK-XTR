@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" style="@style/parentStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/appbar" layout="@layout/app_bar_second" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/_10sdp" android:layout_below="@id/appbar" android:layout_marginStart="20.0dip" android:layout_marginEnd="@dimen/_20sdp">
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/donation_description" style="@style/TextViewDescription" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_20sdp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="$" android:layout_centerVertical="true" android:layout_marginStart="10.0dip" style="@style/TextViewSmallTitle" />
+            <EditText android:id="@id/edit_donation" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="@string/enter_any_amount" android:inputType="numberDecimal" android:paddingStart="@dimen/_20sdp" android:paddingEnd="@dimen/_10sdp" style="@style/Edit_Text" />
+        </RelativeLayout>
+        <Button android:id="@id/button_donate" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_20sdp" android:text="@string/donate" style="@style/button_two" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="?colorMainBackground" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/ivBack" android:visibility="gone" android:layout_marginTop="@dimen/_5sdp" android:src="@drawable/ic_back" android:layout_alignParentTop="true" android:layout_marginStart="@dimen/_5sdp" style="@style/ImageIconStyle" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerViewCat" android:visibility="gone" android:layout_width="200.0dip" android:layout_height="fill_parent" android:layout_marginStart="@dimen/_10sdp" android:layout_toEndOf="@id/ivBack" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/ll_showCategory" android:background="@color/setting_foreground_color" android:padding="4.0dip" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginTop="20.0dip" android:layout_marginBottom="10.0dip" android:layout_weight="1.0" android:layout_marginStart="20.0dip" android:layout_marginEnd="20.0dip">
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <LinearLayout android:gravity="center_vertical" android:id="@id/ll_cat" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/ivPrev" android:background="@drawable/selector_app_bar_icon" android:focusable="true" android:src="@drawable/ic_arrow" android:tint="@color/colorWhite" android:rotation="180.0" style="@style/ImageIconStyleTV" />
+                    <TextView android:textSize="@dimen/_10ssp" android:textColor="@color/colorWhite" android:gravity="center" android:id="@id/tvTitle" android:layout_width="0.0dip" android:text="channel" android:layout_weight="1.0" style="@style/TextViewTitle" />
+                    <ImageView android:id="@id/ivNext" android:background="@drawable/selector_app_bar_icon" android:focusable="true" android:src="@drawable/ic_arrow" android:tint="@color/colorWhite" style="@style/ImageIconStyleTV" />
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/ll_cat" android:layout_marginStart="5.0dip" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                <include android:id="@id/include_progress_bar" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerInParent="true" layout="@layout/progress_bar_layout" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <LinearLayout android:gravity="end|center" android:id="@id/ll_options" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_marginEnd="@dimen/_20sdp">
+                <androidx.mediarouter.app.MediaRouteButton android:theme="@style/ToolBarStyle" android:id="@id/media_route_button" android:visibility="gone" android:layout_width="50.0dip" android:layout_height="fill_parent" android:mediaRouteTypes="user" />
+                <ImageView android:id="@id/iv_search" android:background="@drawable/selector_app_bar_icon" android:focusable="true" android:visibility="visible" android:nextFocusLeft="@id/ll_home" android:nextFocusRight="@id/iv_sort" android:nextFocusUp="@id/ll_home" app:srcCompat="@drawable/ic_search" style="@style/ImageIconStyle" />
+                <ImageView android:id="@id/iv_sort" android:background="@drawable/selector_app_bar_icon" android:focusable="true" android:nextFocusLeft="@id/iv_search" android:nextFocusRight="@id/ll_home" android:nextFocusUp="@id/ll_home" android:layout_marginStart="@dimen/_10sdp" app:srcCompat="@drawable/ic_sort_big" style="@style/ImageIconStyle" />
+            </LinearLayout>
+            <RelativeLayout android:id="@id/llPlayerLayout" android:background="@color/setting_foreground_color" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+                <include layout="@layout/activity_exo_player" />
+                <LinearLayout android:orientation="vertical" android:id="@id/llP2PInfo" android:background="@drawable/opo_rounded_background" android:padding="@dimen/_10sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_20sdp" android:layout_marginEnd="@dimen/_20sdp" android:layout_alignParentEnd="true">
+                    <TextView android:textSize="@dimen/_10ssp" android:textStyle="bold" android:textColor="@color/colorError" android:gravity="center" android:id="@id/tvP2PConnectionStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="P2P connecting" style="@style/TextViewSmallTitle" />
+                    <TextView android:textColor="@color/colorWhite" android:gravity="center" android:id="@id/tvP2PCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0 peer connect" style="@style/TextViewDescription" />
+                    <TextView android:textColor="@color/colorWhite" android:gravity="center" android:id="@id/tvP2PRate" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/TextViewDescription" />
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center" android:id="@id/rlEPGLayout" android:background="@color/setting_foreground_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:layout_weight="0.9" android:layout_marginEnd="10.0dip">
+                <TextView android:textColor="@color/Grey_500" android:gravity="center" android:id="@id/tvNoTvGuide" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/tv_guide_not_found" style="@style/TextViewDescription" />
+                <androidx.recyclerview.widget.RecyclerView android:id="@id/epgRecyclerView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

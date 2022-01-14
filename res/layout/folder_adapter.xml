@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/ll_outer" android:background="@drawable/ripple_effect_item" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:baselineAligned="false" android:layout_weight="5.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <ImageView android:layout_gravity="center" android:id="@id/iv_folder" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_folder_nav" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="4.0">
+        <TextView android:textSize="18.0sp" android:ellipsize="end" android:gravity="center_vertical" android:id="@id/tv_folder_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Folder" android:maxLines="2" style="@style/TextViewSemiBold" />
+        <TextView android:textSize="@dimen/_8ssp" android:textColor="@color/Grey_400" android:id="@id/tv_total_item" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="30 Media file " android:maxLines="1" style="@style/TextViewDescription" />
+    </LinearLayout>
+</LinearLayout>

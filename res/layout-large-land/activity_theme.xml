@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="?colorMainBackground" style="@style/parentStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/appbar" layout="@layout/app_bar_second" />
+    <ScrollView android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/rl_ads" android:layout_below="@id/appbar">
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/shape_opo_background" android:paddingTop="@dimen/_20sdp" android:paddingBottom="@dimen/_20sdp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/_50sdp" android:paddingEnd="@dimen/_50sdp">
+            <TextView android:layout_width="wrap_content" android:text="@string/select_theme" android:textAllCaps="true" style="@style/TextViewTitle" />
+            <RadioGroup android:id="@id/radioGroup" android:layout_width="wrap_content" android:layout_height="wrap_content" android:paddingStart="@dimen/_20sdp" android:paddingEnd="@dimen/_20sdp">
+                <RadioButton android:id="@id/radio_theme1" android:text="@string/sort_default" style="@style/RadioButtonStyle" />
+                <RadioButton android:id="@id/radio_theme2" android:text="@string/theme_second" style="@style/RadioButtonStyle" />
+                <RadioButton android:id="@id/radio_theme3" android:text="@string/theme_third" style="@style/RadioButtonStyle" />
+                <RadioButton android:id="@id/radio_theme4" android:text="@string/theme_fourth" style="@style/RadioButtonStyle" />
+            </RadioGroup>
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout android:layout_gravity="bottom" android:id="@id/rl_ads" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+</RelativeLayout>

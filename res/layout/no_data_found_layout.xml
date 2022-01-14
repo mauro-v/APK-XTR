@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_no_data_found" android:background="@android:color/transparent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.xtreampro.xtreamproiptv.utils.animations.Transformations.GifImageView android:id="@id/gifImageView" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:textSize="20.0sp" android:textColor="@color/colorWhite" android:gravity="center" android:id="@id/tv_no_data_found" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/no_data_found" style="@style/TextViewTitle" />
+</LinearLayout>

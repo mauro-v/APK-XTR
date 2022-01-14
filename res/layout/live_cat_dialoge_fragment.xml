@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/backgroundOpo" android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/ivBack" android:background="@drawable/selector_app_bar_icon" android:focusable="true" android:visibility="visible" android:layout_marginTop="@dimen/_10sdp" android:src="@drawable/ic_back" android:layout_alignParentTop="true" android:layout_marginStart="@dimen/_5sdp" style="@style/ImageIconStyle" />
+    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerViewCat" android:background="@color/backgroundOpo" android:paddingTop="20.0dip" android:paddingBottom="20.0dip" android:layout_width="180.0dip" android:layout_height="fill_parent" android:paddingStart="@dimen/_10sdp" android:paddingEnd="1.0dip" android:layout_toEndOf="@id/ivBack" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    <LinearLayout android:orientation="vertical" android:background="@color/backgroundOpo" android:paddingTop="20.0dip" android:paddingBottom="20.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toEndOf="@id/recyclerViewCat">
+        <LinearLayout android:gravity="center_vertical" android:id="@id/ll_cat" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/ivPrev" android:src="@drawable/ic_arrow" android:tint="@color/colorWhite" android:rotation="180.0" style="@style/ImageIconStyle" />
+            <TextView android:textColor="@color/colorWhite" android:gravity="center" android:id="@id/tvTitle" android:layout_width="250.0dip" android:text="channel" style="@style/TextViewTitle" />
+            <ImageView android:id="@id/ivNext" android:src="@drawable/ic_arrow" android:tint="@color/colorWhite" style="@style/ImageIconStyle" />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginStart="@dimen/_5sdp" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </LinearLayout>
+    <include android:id="@id/include_progress_bar" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerInParent="true" layout="@layout/progress_bar_layout" />
+</RelativeLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout style="@style/parentStyle"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="@dimen/_20sdp">
+            <include android:layout_width="fill_parent" android:layout_height="@dimen/_210sdp" layout="@layout/detail_top_layout" />
+            <LinearLayout android:orientation="vertical" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <include layout="@layout/detail_layout" />
+                <RelativeLayout android:gravity="center_vertical" android:id="@id/rl_movie_name" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/iv_down" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" android:layout_marginEnd="@dimen/_9sdp" android:layout_alignParentEnd="true" app:srcCompat="@drawable/ic_down" />
+                </RelativeLayout>
+                <LinearLayout android:background="?colorAccent" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="7.0dip" />
+                <RelativeLayout android:orientation="vertical" android:id="@id/ll_relatedVideos" android:paddingBottom="@dimen/_10sdp" android:focusableInTouchMode="false" android:visibility="visible" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <TextView android:textSize="18.0sp" android:textColor="@color/textColorPrimary" android:id="@id/tv_related_movies" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/you_may_like" style="@style/TextViewSmallTitle" />
+                    <ProgressBar android:layout_gravity="center" android:id="@id/progress_relatedVideos" android:visibility="visible" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_marginTop="20.0dip" />
+                    <TextView android:textSize="16.0sp" android:textColor="@color/textColorPrimary" android:gravity="center" android:id="@id/tv_no_related_movies_found" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/no_related_movies_found" android:layout_below="@id/tv_related_movies" />
+                    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerView" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_4sdp" android:layout_below="@id/tv_related_movies" app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <ImageView android:id="@id/iv_back" android:background="@drawable/selector_focus" android:padding="@dimen/_9sdp" android:visibility="visible" android:layout_marginTop="10.0dip" android:layout_alignParentTop="true" android:layout_marginStart="10.0dip" android:elevation="@dimen/spacing_30" app:srcCompat="@drawable/ic_back" style="@style/ImageIconStyle" />
+    </RelativeLayout>
+    <include android:visibility="gone" layout="@layout/bottom_navigation_layout" />
+</RelativeLayout>

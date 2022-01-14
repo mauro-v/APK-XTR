@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:id="@id/card_movie_sub_cat" android:layout_width="@dimen/_80sdp" android:layout_height="@dimen/_80sdp" android:layout_margin="5.0dip" android:weightSum="1.0" app:cardBackgroundColor="?colorPrimary" app:cardCornerRadius="@dimen/_4sdp" app:cardElevation="@dimen/_10sdp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_outer" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="2.8">
+            <TextView android:textSize="50.0sp" android:id="@id/tvLogo" android:layout_width="fill_parent" android:layout_height="fill_parent" android:textAllCaps="true" style="@style/TextViewHeading" />
+            <ImageView android:id="@id/iv_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+            <ImageView android:id="@id/iv_heart" android:padding="5.0sp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentEnd="true" app:srcCompat="@drawable/ic_heart_selected" />
+        </RelativeLayout>
+        <TextView android:textSize="@dimen/_9ssp" android:textColor="@color/textColorPrimary" android:ellipsize="end" android:gravity="center" android:id="@id/tv_title" android:paddingBottom="2.0dip" android:layout_height="wrap_content" android:text="Movie Name" android:maxLines="2" android:paddingStart="@dimen/_2sdp" android:paddingEnd="@dimen/_2sdp" android:elevation="@dimen/_2sdp" style="@style/TextViewMedium" />
+        <TextView android:textSize="@dimen/_9ssp" android:textColor="@color/textColorPrimary" android:ellipsize="end" android:gravity="start" android:id="@id/tvCurrentProgram" android:paddingTop="4.0dip" android:visibility="gone" android:layout_height="wrap_content" android:text="No Information" android:maxLines="2" android:paddingStart="@dimen/_2sdp" android:paddingEnd="@dimen/_2sdp" android:elevation="@dimen/_2sdp" style="@style/TextViewDescription" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

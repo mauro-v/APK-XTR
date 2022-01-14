@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:layout_gravity="center" android:id="@id/ll_outer" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/background_rounded" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_30sdp" android:layout_marginStart="@dimen/_10sdp">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/_20sdp">
+            <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/colorBlack" android:gravity="center" android:id="@id/tv_new_playlist" android:padding="@dimen/_5sdp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/rename_playlist" />
+        </LinearLayout>
+        <EditText android:textColor="@color/colorBlack" android:gravity="center" android:id="@id/et_rename_playlist" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/spacing_10" android:hint="@string/enter_the_new_play_list_name" android:maxLines="1" android:maxLength="20" android:inputType="textPersonName|textCapSentences|textCapWords" style="@style/Edit_Text" />
+        <include layout="@layout/button_layout" />
+    </LinearLayout>
+    <RelativeLayout android:gravity="center" android:background="@drawable/circular_oval" android:layout_width="@dimen/_50sdp" android:layout_height="@dimen/_50sdp" android:layout_centerHorizontal="true" android:foregroundGravity="center">
+        <ImageView android:layout_gravity="center" android:id="@id/iv_edit" android:layout_width="36.0dip" android:layout_height="36.0dip" android:tint="@color/colorWhite" app:srcCompat="@drawable/ic_edit" />
+    </RelativeLayout>
+</RelativeLayout>

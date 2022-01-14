@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@id/unfavorite" android:visible="false" android:title="@string/remove_from_favourite" />
+    <item android:id="@id/favoirte" android:visible="false" android:title="@string/add_to_favourite" />
+    <item android:id="@id/add_to_playlist" android:title="@string/add_to_playlist" />
+</menu>

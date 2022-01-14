@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="50.0dip" app:cardBackgroundColor="?colorPrimaryDark" app:cardElevation="@dimen/_10sdp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/rl_appbar" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/iv_menu" android:focusable="true" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="20.0dip" android:layout_marginStart="20.0dip" app:srcCompat="@drawable/ic_menu" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_back" android:background="@drawable/selector_app_bar_icon" android:focusable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerInParent="true" android:layout_alignParentStart="true">
+                <ImageView android:id="@id/iv_back" android:layout_width="wrap_content" android:layout_height="fill_parent" android:paddingStart="@dimen/_8sdp" android:paddingEnd="@dimen/_6sdp" app:srcCompat="@drawable/ic_back" />
+            </LinearLayout>
+            <TextView android:textSize="18.0sp" android:textColor="@color/textColorPrimary" android:ellipsize="end" android:gravity="start|center" android:id="@id/tv_title" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/title" android:maxLines="1" android:maxLength="20" android:layout_centerInParent="true" android:paddingStart="@dimen/_5sdp" android:paddingEnd="@dimen/_5sdp" android:layout_toStartOf="@id/llMenu" android:layout_toEndOf="@id/ll_back" style="@style/TextViewSmallTitle" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/llMenu" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentEnd="true">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_search" android:background="@drawable/selector_app_bar_icon" android:focusable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:paddingStart="@dimen/_6sdp" android:paddingEnd="@dimen/spacing_10">
+                    <ImageView android:layout_gravity="center" android:id="@id/iv_search" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" app:srcCompat="@drawable/ic_search" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_option" android:background="@drawable/selector_app_bar_icon" android:focusable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:paddingStart="@dimen/_9sdp" android:paddingEnd="@dimen/spacing_15">
+                    <ImageView android:id="@id/iv_option" android:focusable="true" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" app:srcCompat="@drawable/ic_sort_big" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_delete_all" android:background="@drawable/selector_app_bar_icon" android:focusable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:paddingStart="@dimen/_9sdp" android:paddingEnd="@dimen/spacing_15">
+                    <ImageView android:id="@id/iv_delete" android:focusable="true" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:tint="@color/colorWhite" app:srcCompat="@drawable/ic_delete" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout android:id="@id/ll_search_appbar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <ImageView android:id="@id/iv_cancel" android:background="@drawable/selector_app_bar_icon" android:padding="@dimen/_6sdp" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="@dimen/spacing_5" android:layout_marginStart="@dimen/spacing_10" android:layout_marginEnd="10.0dip" app:srcCompat="@drawable/ic_cancel" />
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <EditText android:textSize="18.0sp" android:textColor="@color/textColorPrimary" android:textColorHint="@color/colorGrey" android:id="@id/et_searchText" android:background="@drawable/edit_text_underline" android:paddingTop="@dimen/_5sdp" android:paddingBottom="@dimen/_5sdp" android:layout_width="fill_parent" android:layout_height="fill_parent" android:hint="Search.." android:maxLines="1" android:inputType="text" android:paddingStart="@dimen/_6sdp" android:paddingEnd="@dimen/_20sdp" />
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_searchicon" android:background="@drawable/selector_app_bar_icon" android:padding="@dimen/_6sdp" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentEnd="true">
+                    <ImageView android:id="@id/iv_searchicon" android:focusable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="10.0dip" android:layout_marginEnd="20.0dip" app:srcCompat="@drawable/ic_search" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

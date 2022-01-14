@@ -1,0 +1,23 @@
+.class public final Le/c/a/b/d/b/u;
+.super Ljava/lang/Object;
+.source ""
+
+
+# static fields
+.field private static a:Ljava/lang/String; = "19.0.0"
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 0
+
+    return-void
+.end method
+
+.method public static a()Ljava/lang/String;
+    .locals 1
+
+    sget-object v0, Le/c/a/b/d/b/u;->a:Ljava/lang/String;
+
+    return-object v0
+.end method
